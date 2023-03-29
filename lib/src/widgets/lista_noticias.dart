@@ -3,16 +3,16 @@ import 'package:news_provider/src/models/news_models.dart';
 import 'package:news_provider/src/theme/tema.dart';
 
 class ListaNoticias extends StatelessWidget {
-  final List<Article> noticias;
+  final List<Article>? noticias;
 
   const ListaNoticias(this.noticias);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: noticias.length,
+        itemCount: noticias!.length,
         itemBuilder: (BuildContext context, int index) {
-          return _Noticia(noticia: noticias[index], index: index);
+          return _Noticia(noticia: noticias![index], index: index);
         });
   }
 }
